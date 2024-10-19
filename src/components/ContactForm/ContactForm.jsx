@@ -14,6 +14,7 @@ export default function ContactForm({ onAdd }) {
   };
 
   const handleSubmit = (values, actions) => {
+    ////!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //Функція відправки форми має два параметри: values - об'єкт значень полів форми в момент її відправки. actions - об'єкт з допоміжними методами. Наприклад, метод resetForm використовується для очищення полів форми після відправки.
     const newContact = {
       id: nanoid(),
@@ -26,7 +27,7 @@ export default function ContactForm({ onAdd }) {
 
   const regexPhoneNumber = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/; //validation of the number field if a valid number provided.
 
-  const contactSchema = Yup.object().shape({
+  const contactSchema = Yup.object().shape({   //!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //валідація  полів форми бібліотекою Yup та виведи повідомлення про помилки:
     name: Yup.string()
       .min(3, "Must be more than 3 characters") // перше значення показує число символів, друге - якщо меньше ніж потрібно символів.

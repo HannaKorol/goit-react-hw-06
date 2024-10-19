@@ -3,6 +3,7 @@ import phoneNumberLogo from "./phone.svg";
 import s from "./Contact.module.css";
 
 export default function Contact({ name, number, onDelete }) {
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!
   return (
     <div className={s.wrapper}>
       <div className={s.textWrapper}>

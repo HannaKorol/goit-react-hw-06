@@ -1,3 +1,6 @@
+//!Жодної логіки в Апп
+
+
 import initialContacts from "./contacts.json";
 import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
@@ -7,7 +10,8 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [filter, setFilter] = useState("");
 
-  //Отримання контактів з локального сховища
+  //Отримання контактів з локального сховища  ---//! Замість локального сховища
+
   const getContacts = () => {
     const savedContacts = localStorage.getItem("saved-contacts");
     if (savedContacts) {
@@ -18,7 +22,7 @@ export default function App() {
 
   const [contacts, setContacts] = useState(getContacts); //оголосили стан компонента
 
-  //Запис значення полів форми до локального сховища
+  //Запис значення полів форми до локального сховища //!Замість useEffect використовую  Redux Persist для збереження до локального сховища
   useEffect(() => {
     window.localStorage.setItem("saved-contacts", JSON.stringify(contacts)); //перетворити збережене значення у рядок за допомогою JSON.stringify.
   }, [contacts]);

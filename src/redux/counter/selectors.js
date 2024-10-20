@@ -1,2 +1,0 @@
-export const selectCounter = (state) => state.counter.counter;
-export const selectStep = (state) => state.counter.step; //просто функція яка звернеться до стейта і поверне нам якесь значення (лекція 1 58:25)

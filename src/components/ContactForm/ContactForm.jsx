@@ -3,8 +3,11 @@ import { ErrorMessage, Field, Form, Formik } from "Formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
+import { useDispatch } from "react-redux";
+import {addContact} from "../../redux/contactsSlice.js"
 
 export default function ContactForm({ onAdd }) {
+  const dispatch = useDispatch();
   const nameFieldId = useId(); //!!!Не используйте Nano ID для генерации свойства key в JSX. При каждом рендере key будет разный, что плохо скажется на производительности.Для связи <input> и <label> лучше использовать useId, который был добавлен в React 18. (https://github.com/ai/nanoid/blob/main/README.ru.md)
   const numberFieldId = useId();
 
@@ -21,7 +24,8 @@ export default function ContactForm({ onAdd }) {
       name: values.name,
       number: values.number,
     };
-    onAdd(newContact); // Додаємо новий контакт за створенним шаблоном newContact
+    dispatch(addContact);
+  /*   onAdd(newContact); */ // Додаємо новий контакт за створенним шаблоном newContact
     actions.resetForm();
   };
 

@@ -1,4 +1,4 @@
-import { decrement, increment } from "./actions";
+/* import { decrement, increment } from "./actions";
 
 const initialState = {
     counter: 0,
@@ -21,4 +21,4 @@ export const counterReducer = (state = initialState, action) => {
     default:
       return state;
   }
-};
+}; */

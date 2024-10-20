@@ -17,14 +17,13 @@ export default function ContactForm({ onAdd }) {
   };
 
   const handleSubmit = (values, actions) => {
-    ////!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //Функція відправки форми має два параметри: values - об'єкт значень полів форми в момент її відправки. actions - об'єкт з допоміжними методами. Наприклад, метод resetForm використовується для очищення полів форми після відправки.
     const newContact = {
       id: nanoid(),
       name: values.name,
       number: values.number,
     };
-    dispatch(addContact);
+    dispatch(addContact(newContact));
   /*   onAdd(newContact); */ // Додаємо новий контакт за створенним шаблоном newContact
     actions.resetForm();
   };

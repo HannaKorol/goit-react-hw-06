@@ -20,7 +20,7 @@ export default function App() {
     return initialContacts;
   };
 
-  const [contacts, setContacts] = useState(getContacts); //оголосили стан компонента
+   const [contacts, setContacts] = useState(getContacts); //оголосили стан компонента
 
   //Запис значення полів форми до локального сховища //!Замість useEffect використовую  Redux Persist для збереження до локального сховища
   useEffect(() => {

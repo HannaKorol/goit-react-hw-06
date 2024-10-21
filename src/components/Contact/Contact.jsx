@@ -1,11 +1,12 @@
 import nameLogo from "./user.svg";
 import phoneNumberLogo from "./phone.svg";
 import s from "./Contact.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "../../redux/contactsSlice";
 
-export default function Contact({ name, number, onDelete }) {
+export default function Contact({ name, number /* onDelete */ }) {
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts); 
 
   return (
     <div className={s.wrapper}>
@@ -24,7 +25,7 @@ export default function Contact({ name, number, onDelete }) {
         </div>
       </div>
       <button
-        onClick={() => dispatch(deleteContact(item.id))}
+        onClick={() => dispatch(deleteContact(contact.id))}
         className={s.deleteButton}
       >
         Delete

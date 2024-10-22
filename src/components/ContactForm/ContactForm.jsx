@@ -1,5 +1,5 @@
 import { useId } from "react"; // хук useId для створення унікальних ідентифікаторів полів. ("Елементи форми")
-import { ErrorMessage, Field, Form, Formik } from "Formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";

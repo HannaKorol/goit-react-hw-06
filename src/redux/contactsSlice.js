@@ -16,7 +16,7 @@ const slice = createSlice({
     ],
   },
   selectors: {
-    selectContacts: (state) => state.items, //???items ??? чи contact??? чи state.contacts.items
+    selectContacts: (state) => state.items, 
   },
   reducers: {
     addContact: (state, action) => {

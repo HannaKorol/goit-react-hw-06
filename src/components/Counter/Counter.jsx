@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCounter, selectStep } from "../../redux/counter/selectors";
 import { decrement, increment } from "../../redux/counter/actions";
@@ -23,4 +23,4 @@ const Counter = () => {
   return <div>Counter</div>;
 };
 
-export default Counter;
+export default Counter; */

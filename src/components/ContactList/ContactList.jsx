@@ -4,17 +4,11 @@ import s from "./ContactList.module.css";
 import { deleteContact, selectContacts } from "../../redux/contactsSlice";
 import { selectNameFilter } from "../../redux/filtersSlice";
 
-export default function ContactList(
-  {
-    /* contacts */
-    /* onDelete */
-  }
-) {
+export default function ContactList() {
   const dispatch = useDispatch();
-
-  const contacts = useSelector(selectContacts); // Select contacts from Redux state
+  
+  const contacts = useSelector(selectContacts); 
   const nameFilter = useSelector(selectNameFilter);
-
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(nameFilter.toLowerCase())
   );

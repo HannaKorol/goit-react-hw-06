@@ -1,6 +1,5 @@
 //!Жодної логіки в Апп
 
-
 import initialContacts from "./contacts.json";
 import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
